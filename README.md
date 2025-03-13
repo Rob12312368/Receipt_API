@@ -6,9 +6,10 @@
 
 ## What command do you need?
   ```
+  git clone https://github.com/Rob12312368/Receipt_API.git
+  cd ./Receipt_API
   docker compose up
   ```
-
 
 ## What tech stack did I use?
   - NextJS
@@ -23,3 +24,7 @@
     - check if the JSON body is in the right form (400)
     - check if data has been stored into the database (500)
     - return 201 if successful
+   
+## How to test my code?
+  - go to **http://localhost:3000/receipts/process** for testing POST
+  - go to **http://localhost:3000/receipts/{id}/points** for testing GET
