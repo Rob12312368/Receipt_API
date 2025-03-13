@@ -26,5 +26,5 @@
     - return 201 if successful
    
 ## How to test my code?
-  - go to **http://localhost:3000/receipts/process** for testing POST
-  - go to **http://localhost:3000/receipts/{id}/points** for testing GET
+  - send POST request to http://localhost:3000/receipts/process
+  - send GET request http://localhost:3000/receipts/{id}/points
