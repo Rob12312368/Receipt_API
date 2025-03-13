@@ -4,6 +4,11 @@
 ## What do you need to run the code?
   - Docker
 
+  '''
+  docker compose up
+  '''
+
+
 ## What tech stack did I use?
   - NextJS
   - Redis
