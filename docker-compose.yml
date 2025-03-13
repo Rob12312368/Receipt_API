@@ -7,15 +7,12 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    volumes:
-      - .:/app
-      - /app/node_modules
     environment:
       - NODE_ENV=production
       - REDIS_URL=redis://redis:6379
     depends_on:
       redis:
-        condition: service_healthy # Wait for Redis to be healthy
+        condition: service_healthy
     restart: unless-stopped
 
   redis:
@@ -25,11 +22,11 @@ services:
     volumes:
       - redis-data:/data
     healthcheck:
-      test: ["CMD", "redis-cli", "ping"] # Checks if Redis responds with PONG
-      interval: 5s                       # How often to check
-      timeout: 3s                        # Timeout for the check
-      retries: 5                         # Number of retries before failing
-      start_period: 5s                  # Time to wait before starting checks
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
 
 volumes:
   redis-data:
