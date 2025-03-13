@@ -17,13 +17,13 @@
 
 ## What cases have I taken care of?
   - GET (/receipts/{id}/points)
-    - check if the UUID is in the right form (400)
-    - check if data can be found in the database (404)
-    - return 200 if successful
+    - if the UUID is not in the right form (400)
+    - if data can not be found in the database (404)
+    - Otherwise, considered as successful (200)
   - POST (/receipt/process)
-    - check if the JSON body is in the right form (400)
-    - check if data has been stored into the database (500)
-    - return 201 if successful
+    - if the JSON body is not in the right form (400)
+    - if data has not been stored into the database (500)
+    - Otherwise, considered as successful (201)
    
 ## How to test my code?
   - send GET request `http://localhost:3000/receipts/{id}/points`
