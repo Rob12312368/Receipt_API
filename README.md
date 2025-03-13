@@ -4,6 +4,7 @@
 ## What do you need to run the code?
   - Docker
 
+## What command do you need?
   ```
   docker compose up
   ```
